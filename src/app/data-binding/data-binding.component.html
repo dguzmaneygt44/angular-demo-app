@@ -1,0 +1,15 @@
+<div class="row">
+    <div class="col-lg-6">
+        <label for="">Username</label>
+        <input 
+            type="text" 
+            class="form-control" 
+            [(ngModel)]="username" 
+            (input)="onSetUserName($event)">
+        <p>{{ username }}</p>
+        <button 
+            [disabled]="!userNameIsNotEmpty" 
+            class="btn btn-primary" 
+            (click)="onResetUserName()">Reset me!</button>
+    </div>
+</div>
